@@ -1,0 +1,18 @@
+<header class="header">
+  <a [routerLink]="auth.userId() ? '/events' : '/login'" class="logo">Event Platform</a>
+  @if (auth.userId()) {
+    <nav>
+      @if (auth.userRole() === 'ORGANIZER') {
+        <a routerLink="/organizer-home" routerLinkActive="active">Organizer Dashboard</a>
+      } @else {
+        <a routerLink="/participant" routerLinkActive="active">Participant Home</a>
+      }
+      <a routerLink="/events" routerLinkActive="active">Events</a>
+      <a routerLink="/my-registrations" routerLinkActive="active">My Registrations</a>
+    </nav>
+  }
+  <app-user-select />
+</header>
+<main>
+  <router-outlet />
+</main>

@@ -1,0 +1,19 @@
+{
+  "name": "event-management-api",
+  "version": "1.0.0",
+  "description": "Event Management Platform API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "seed": "node src/db/seed.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "json2csv": "^5.0.7",
+    "pdfkit": "^0.13.0"
+  }
+}
