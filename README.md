@@ -4,7 +4,6 @@ Ceci est une petite application pour créer, publier et gérer des événements.
 L'objectif ici est simple : permettre à des organisateurs de publier des événements, et aux participants de s'y inscrire (avec gestion de liste d'attente).
 
 
-
 ## Stack
 
 - Backend : Node.js + Express, SQLite (fichiers locaux)
