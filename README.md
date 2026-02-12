@@ -3,7 +3,7 @@
 Ceci est une petite application pour créer, publier et gérer des événements.
 L'objectif ici est simple : permettre à des organisateurs de publier des événements, et aux participants de s'y inscrire (avec gestion de liste d'attente).
 
----
+
 
 ## Stack
 
@@ -11,7 +11,6 @@ L'objectif ici est simple : permettre à des organisateurs de publier des évén
 - Frontend : Angular (SPA, composants standalone)
 - Auth (dev) : en-têtes `X-User-Id` et `X-User-Role`
 
----
 
 ## Démarrage rapide
 
@@ -36,7 +35,7 @@ Ensuite, ouvrez votre navigateur sur l'URL indiquée et connectez-vous.
 Comptes de démonstration (si la base a été seedée) :
 - `admin@events.com`, `user1@events.com`, mot de passe : `password123`
 
----
+
 
 ## Ce qui a changé récemment
 
@@ -46,7 +45,7 @@ Comptes de démonstration (si la base a été seedée) :
   - Utilité : notifications comme la promotion d'un utilisateur depuis la liste d'attente.
 - Audit des accès refusés (403) : les tentatives interdites sont consignées dans `data/audit.log`.
 
----
+
 
 ## Utilisation rapide des notifications (exemple)
 
@@ -58,7 +57,7 @@ const evt = new EventSource('/api/notifications/subscribe?userId=3');
 evt.onmessage = e => console.log('notification', e.data);
 ```
 
----
+
 
 ## Points importants / règles métier
 
@@ -68,7 +67,7 @@ evt.onmessage = e => console.log('notification', e.data);
 - Les organisateurs ne peuvent pas s'inscrire à leurs propres événements.
 - Les actions d'édition/publication/fermeture sont réservées à l'organisateur propriétaire de l'événement.
 
----
+
 
 ## Endpoints utiles
 
@@ -84,7 +83,7 @@ evt.onmessage = e => console.log('notification', e.data);
 - `GET /api/users/:userId/registrations` — voir ses inscriptions (ou pour organisateur filtré)
 - `GET /api/notifications/subscribe` — SSE subscribe
 
----
+
 
 ## Où regarder en cas de problème
 
@@ -92,6 +91,5 @@ evt.onmessage = e => console.log('notification', e.data);
 - Audit 403 : `data/audit.log`
 - DB : fichier SQLite dans `backend/data`
 
----
 
 Si tu veux que j'adapte le README en anglais, que je le réduise encore, ou que j'ajoute un petit guide pour déployer, dis-moi lequel — je le fais rapidement et sans « style IA ». 
