@@ -12,7 +12,7 @@
 ## Description du Projet
 
 Ceci est une petite application pour créer, publier et gérer des événements.
-L'objectif ici est simple : permettre à des organisateurs de publier des événements, et aux participants de s'y inscrire (avec gestion de liste d'attente).
+L'objectif ici est simple : permettre à des organisateurs de publier des événements, et aux participants de s'y inscrire (avec la possibilité de gestion de liste d'attente).
 
 
 ## Stack
@@ -49,20 +49,20 @@ Comptes de démonstration (si la base a été seedée) :
 
 ## Ce qui a changé récemment
 
-- J'ai retiré la fonctionnalité d'export (CSV/PDF/iCal) : elle n'était pas utile pour votre flux.
+- Nous avons retiré la fonctionnalité d'export (CSV/PDF/iCal) : elle n'était pas utile pour notre flux.
 - Ajout d'un petit service de notifications en temps réel (Server-Sent Events) :
-  - Endpoint : `/api/notifications/subscribe` (utiliser `X-User-Id` en header, ou `?userId=` si EventSource ne permet pas d'envoyer des headers).
-  - Utilité : notifications comme la promotion d'un utilisateur depuis la liste d'attente.
+  - **Endpoint** : `/api/notifications/subscribe` (utiliser `X-User-Id` en header, ou `?userId=` si EventSource ne permet pas d'envoyer des headers).
+  - **Utilité** : notifications comme la promotion d'un utilisateur depuis la liste d'attente.
 - Audit des accès refusés (403) : les tentatives interdites sont consignées dans `data/audit.log`.
 
 
 
 ## Utilisation rapide des notifications (exemple)
 
-Si vous voulez voir les notifications côté client dans la console du navigateur :
+Si l'on veut voir les notifications côté client dans la console du navigateur :
 
 ```js
-// Si votre navigateur peut ajouter des headers sur EventSource, envoyez X-User-Id
+// Si le navigateur peut ajouter des headers sur EventSource, envoyez X-User-Id
 const evt = new EventSource('/api/notifications/subscribe?userId=3');
 evt.onmessage = e => console.log('notification', e.data);
 ```
@@ -100,6 +100,3 @@ evt.onmessage = e => console.log('notification', e.data);
 - Logs serveur : console où vous lancez `npm start` dans `backend`
 - Audit 403 : `data/audit.log`
 - DB : fichier SQLite dans `backend/data`
-
-
-Si tu veux que j'adapte le README en anglais, que je le réduise encore, ou que j'ajoute un petit guide pour déployer, dis-moi lequel — je le fais rapidement et sans « style IA ». 
