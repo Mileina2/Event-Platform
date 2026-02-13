@@ -1,5 +1,16 @@
 # Plateforme de gestion d'événements — MVP
 
+> **Module** : Web Application Architectures
+> 
+> **Enseignant référent** :  NAUWYNCK Arnaud
+> 
+> **Auteurs** :  **Yobe GNADAME,  Mileina MALOU, Jean-Eudes WANDJI**
+> 
+> **Promotion** :  ESILV M1 2025-2026
+
+
+## Description du Projet
+
 Ceci est une petite application pour créer, publier et gérer des événements.
 L'objectif ici est simple : permettre à des organisateurs de publier des événements, et aux participants de s'y inscrire (avec gestion de liste d'attente).
 
